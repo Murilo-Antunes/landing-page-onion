@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul ol li{
+    list-style: none;
+}
+
+
+html{
+    background-image: url(img/3d-rendering-abstract-black-white-neon.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.387);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex-grow: 1;
+}
