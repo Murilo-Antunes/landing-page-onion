@@ -1,7 +1,10 @@
-const menu = document.getElementById('#img-hamburger')
+document.addEventListener('DOMContentLoaded', () => {
 
-function menuAction () {
-    menu.classList.toggle ('show')
-}
+    const menu = document.querySelector('.img-hamburger')
 
-menu.addEventListener('click', menuAction)
+        function menuAction () {
+            menu.classList.toggle ('show')
+        }
+    
+        menu.addEventListener('click', menuAction)
+    })

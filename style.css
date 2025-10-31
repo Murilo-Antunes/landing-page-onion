@@ -335,7 +335,7 @@ footer img{
         display: block;
     }
 
-    #ul-hamburger{
+    .ul-hamburger{
         position: absolute;
         top: 0;
         left: 0;
@@ -347,20 +347,36 @@ footer img{
         display: flex;
         width: 100vw;
         height: 100vh;
-        z-index: 10;
+        z-index: 1;
         flex-direction: column;
         justify-content: space-evenly;
+        transition: all 1s;
     }
 
-    #ul-hamburger li{
+    .img-hamburger{
+        position: absolute;
+        z-index: 2;
+        top: 25px;
+        left: 90vw;
+        width: 30px;
+        transition: ease-in-out 0.8s;
+    }
+
+    .img-hamburger.show{
+        transform: translate(-85vw);
+        transition: ease-in-out 0.8s;
+    }
+
+    .ul-hamburger li{
         font-size: 7vw;
         margin-bottom: 10px;
         text-align: center;
         line-height: 1.5em;
     }
 
-     #img-hamburger:hover ~ #ul-hamburger{
+     .img-hamburger.show ~ .ul-hamburger{
         transform: translate(0);
+        transition: all 1s;
     }
 
 }
