@@ -36,6 +36,7 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -167,7 +168,7 @@ h1{
     width: 94px;
     border: 13px solid rgba(189, 189, 189, 0.521);
     border-radius: 20px;
-    box-shadow: 0px 0px 0px 2px #ffffffb8;
+    box-shadow: 0px 0px 0px 2px #ffffffb8
 }
 
 footer{
@@ -239,6 +240,11 @@ footer img{
 }
 
 @media (max-width: 430px){
+
+    body, html{
+        position: relative;
+        overflow: hidden;
+    }
     hr{
         display: block;
         border-color: transparent;
@@ -331,27 +337,30 @@ footer img{
 
     #ul-hamburger{
         position: absolute;
-        top: 120px;
-        left: 90%;
-        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: translate(100%);
         width: 69px;
         padding: 10px 5px;
-        display: none;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     #ul-hamburger li{
-        font-size: 7px;
+        font-size: 7vw;
         margin-bottom: 10px;
         text-align: center;
+        line-height: 1.5em;
     }
 
-    #img-hamburger:hover ~ #ul-hamburger {
-        position: absolute;
-        top: 120px;
-        left: 90%;
-        transform: translate(-50%, -50%);
-        width: 69px;
-        padding: 10px 5px;
-        display: block;
-       }
+     #img-hamburger:hover ~ #ul-hamburger{
+        transform: translate(0);
+    }
+
 }
