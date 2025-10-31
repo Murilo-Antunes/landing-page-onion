@@ -349,7 +349,8 @@ footer img{
         height: 100vh;
         z-index: 1;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 50px;
         transition: all 1s;
     }
 
@@ -369,9 +370,7 @@ footer img{
 
     .ul-hamburger li{
         font-size: 7vw;
-        margin-bottom: 10px;
         text-align: center;
-        line-height: 1.5em;
     }
 
      .img-hamburger.show ~ .ul-hamburger{
